@@ -1,0 +1,17 @@
+nav {
+  height: 120px;
+  width: 100%;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  font-family: Bungee, sans-serif;
+  padding: 0 1.5em;
+}
+
+nav .tweeter-logo {
+  font-family: Bungee, sans-serif;
+}
+
+nav .new-tweet {
+  font-family: Bungee, sans-serif;
+  float: right;
+}
