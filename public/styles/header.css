@@ -1,0 +1,18 @@
+header {
+  height: 520;
+  width: 100%;
+  background-color: blueviolet;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+header .img {
+  justify-content: center;
+  align-items: center;
+}
+header .name {
+  justify-content: center;
+  align-items: center;
+}

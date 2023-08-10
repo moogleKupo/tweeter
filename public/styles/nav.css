@@ -5,6 +5,7 @@ nav {
   color: #FFFFFF;
   font-family: Bungee, sans-serif;
   padding: 0 1.5em;
+  position: fixed;
 }
 
 nav .tweeter-logo {
