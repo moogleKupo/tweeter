@@ -1,7 +1,6 @@
 header {
-  height: 520;
+  height: 120px;
   width: 100%;
-  background-color: blueviolet;
   display: flex;
   justify-content: center;
   align-items: center;

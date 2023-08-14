@@ -1,0 +1,76 @@
+/* Styling for tweet container */
+.tweet-container {
+  margin-top: 20px;
+  background-color: #8a005e;
+  border: 2px solid #000000;
+}
+
+/* Styling for tweet article */
+.tweet {
+  border: 1px solid transparent;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.tweet:hover {
+  box-shadow: 12px 12px #4e4d4d;
+}
+
+/* Styling for tweet header */
+.tweet-header {
+  display: flex;
+  align-items: center;
+}
+
+.profile-picture {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 5px;
+  display: flex;
+    align-self: flex-start;
+}
+
+.tweet-name {
+  font-size: 1.2rem;
+  display: flex;
+    align-self: flex-start;
+}
+
+/* Styling for tweet content */
+.tweet-content {
+  margin: 10px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  border-bottom: 1px solid #000000;
+  padding-bottom: 5px;
+}
+
+/* Styling for tweet footer */
+.tweet-footer {
+  display: flex;
+  justify-content: flex-end;
+  color: #777;
+  align-self: flex-end;
+}
+
+.tweet-footer i {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.far.fa-flag:hover {
+  color: yellow;
+}
+
+.fas.fa-retweet:hover {
+  color: yellow;
+}
+
+.fas.fa-heart:hover {
+  color: yellow;
+}
