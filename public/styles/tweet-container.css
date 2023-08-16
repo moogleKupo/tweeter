@@ -19,7 +19,7 @@
 }
 
 /* Styling for tweet header */
-.tweet-header {
+article.tweet-header {
   display: flex;
   align-items: center;
 }
