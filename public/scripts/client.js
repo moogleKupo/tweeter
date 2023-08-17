@@ -2,13 +2,7 @@
 // jQuery is already loaded
 // Reminder: Use (and do all your DOM work in) jQuery's document ready function
 
-// Sample tweet data
-
 $(document).ready(function() {
-  const data = [
-    
-  ];
-
   const loadTweets = function() {
     $.ajax({
       method: 'GET',
@@ -16,8 +10,6 @@ $(document).ready(function() {
       dataType: 'json',
     })
     .done(function(tweets) {
-      console.log('Fetched tweets:', tweets);
-      // Call a function to render the fetched tweets
       renderTweets(tweets);
     })
     .fail(function(error) {
@@ -26,26 +18,23 @@ $(document).ready(function() {
   };
 
   loadTweets();
-  
-  // Function to render tweets
-  const renderTweets = function(tweets) {
-    const $tweetsContainer = $('#tweets-container'); // Get the container element
-    $tweetsContainer.empty(); // empty the container prior to rendering a new tweet
 
-    // Loop through each tweet and append it to the container
+  const renderTweets = function(tweets) {
+    const $tweetsContainer = $('#tweets-container');
+    $tweetsContainer.empty();
+    
     for (const tweet of tweets) {
-      const $tweet = createTweetElement(tweet); // Create a tweet element
-      $tweetsContainer.append($tweet); // Append the tweet element to the container
+      const $tweet = createTweetElement(tweet);
+      $tweetsContainer.append($tweet);
     }
   };
 
-  // Function to create a tweet element
   const createTweetElement = function(tweet) {
+    const userAvatars = tweet.user.avatars || ''; // Default to empty string if avatars property is not present
     const $tweet = $(`
       <article class="tweet">
         <header class="tweet-header">
-          <img class="profile-picture" src="${tweet.user.avatars}" alt="${tweet.user.name}" />
-          <h3>${tweet.user.name}</h3>
+        <img class="profile-picture" src="${userAvatars}" alt="${tweet.user.name}" />          <h3>${tweet.user.name}</h3>
           <span>${tweet.user.handle}</span>
         </header>
         <div class="tweet-content">
@@ -62,26 +51,31 @@ $(document).ready(function() {
     return $tweet;
   };
 
-
-  // Event listener for form submission
   $('#tweet-form').submit(function(event) {
-    event.preventDefault(); // Prevent default form submission behavior
+    event.preventDefault();
+    
+    const $tweetText = $('#tweet-text');
+    const tweetContent = $tweetText.val().trim();
 
-    const formData = $(this).serialize(); // Serialize form data
-
-    // AJAX POST request
-    $.ajax({
-      method: 'POST',
-      url: '/tweets',
-      data: formData,
-    })
-    .done(function(response) {
-      // Assuming the response contains the newly created tweet object
-      renderTweets([response]); // Render the new tweet
-      $('#tweet-text').val(''); // Clear the text area
-    })
-    .fail(function(error) {
-      console.log('Error:', error);
-    });
+    if (tweetContent === "") {
+      alert("Tweet content cannot be empty.");
+    } else if (tweetContent.length > 140) {
+      alert("Tweet is too long. Maximum length is 140 characters.");
+    } else {
+      const formData = $(this).serialize();
+      $.ajax({
+        method: 'POST',
+        url: '/tweets',
+        data: formData,
+      })
+      .done(function(response) {
+        const $newTweet = createTweetElement(response);
+        $('#tweets-container').prepend($newTweet);
+        $tweetText.val('');
+      })
+      .fail(function(error) {
+        console.log('Error:', error);
+      });
+    }
   });
 });

@@ -6,6 +6,7 @@ nav {
   font-family: Bungee, sans-serif;
   padding: 0 1.5em;
   position: fixed;
+  margin: 0 auto; 
 }
 
 nav .tweeter-logo {
