@@ -5,15 +5,34 @@ nav {
   color: #FFFFFF;
   font-family: Bungee, sans-serif;
   padding: 0 1.5em;
+  display: flex;
+  justify-content: space-between;
   position: fixed;
   margin: 0 auto; 
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
 
 nav .tweeter-logo {
   font-family: Bungee, sans-serif;
+  transform: translateY(50%);
+  font-size: 36px;
+}
+
+.fa-solid.fa-angles-down {
+  text-align: center;
+  color: green;
 }
 
 nav .new-tweet {
   font-family: Bungee, sans-serif;
   float: right;
+}
+
+@media only screen and (max-width: 768px) {
+  nav {
+    background-color: #000000;
+    background-image: url("/images/profile-hex.png");
+  }
 }

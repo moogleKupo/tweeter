@@ -2,9 +2,10 @@ header {
   height: 400px;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: column;
   align-items: center;
-  flex-direction: column;
+  background-color: grey;
+  margin-top: 120px;
 }
 
 header .img {
@@ -12,6 +13,5 @@ header .img {
   align-items: center;
 }
 header .name {
-  justify-content: center;
-  align-items: center;
+  transform: translateY(-100%);
 }
