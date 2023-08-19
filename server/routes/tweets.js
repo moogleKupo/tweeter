@@ -23,6 +23,8 @@ module.exports = function (DataHelpers) {
       return;
     }
 
+    console.log("submitted:", req.body.text); // Added console.log() here
+
     const user = req.body.user ? req.body.user : userHelper.generateRandomUser();
     const tweet = {
       user: user,
@@ -36,7 +38,6 @@ module.exports = function (DataHelpers) {
       if (err) {
         res.status(500).json({ error: err.message });
       } else {
-        // Send the newly created tweet's data as the response
         res.status(201).json({
           user: user,
           content: {

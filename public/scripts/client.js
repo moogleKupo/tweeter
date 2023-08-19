@@ -1,29 +1,4 @@
 $(document).ready(function() {
-  const loadTweets = function() {
-    $.ajax({
-      method: 'GET',
-      url: '/tweets',
-      dataType: 'json',
-    })
-    .done(function(tweets) {
-      renderTweets(tweets);
-    })
-    .fail(function(error) {
-      console.log('Error fetching tweets:', error);
-    });
-  };
-
-  loadTweets();
-
-  const renderTweets = function(tweets) {
-    const $tweetsContainer = $('#tweets-container');
-    $tweetsContainer.empty();
-    
-    for (const tweet of tweets) {
-      const $tweet = createTweetElement(tweet);
-      $tweetsContainer.append($tweet);
-    }
-  };
 
   const createTweetElement = function(tweet) {
     const userAvatars = tweet.user.avatars || ''; // Default to empty string if avatars property is not present
@@ -47,6 +22,40 @@ $(document).ready(function() {
     `);
     return $tweet;
   };
+  const loadTweets = function() {
+    const escapeHTML = function(str) {
+      const div = document.createElement('div');
+      div.appendChild(document.createTextNode(str));
+      return div.innerHTML;
+    };
+
+    const renderTweets = function(tweets) {
+      const $tweetsContainer = $('#tweets-container');
+      $tweetsContainer.empty();
+      
+      for (const tweet of tweets) {
+        const $tweet = createTweetElement(tweet);
+        $tweetsContainer.append($tweet);
+      }
+    };
+    
+    $.ajax({
+      method: 'GET',
+      url: '/tweets',
+      dataType: 'json',
+    })
+    .done(function(tweets) {
+      renderTweets(tweets);
+    })
+    .fail(function(error) {
+      console.log('Error fetching tweets:', error);
+    });
+  };
+
+  loadTweets();
+
+
+
 
   $('#tweet-form').submit(function(event) {
     event.preventDefault();
