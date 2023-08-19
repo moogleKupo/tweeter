@@ -7,12 +7,11 @@
 
 /* Styling for tweet article */
 .tweet {
-  border: 1px solid transparent;
-  padding: 10px;
-  margin-bottom: 10px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  margin: 0 auto;
+  border: 3px solid black;
+  margin-top: 15px;
+  padding: 5px;
+  max-width: 100%;
 }
 .tweet:hover {
   box-shadow: 12px 12px #4e4d4d;
@@ -20,8 +19,12 @@
 
 /* Styling for tweet header */
 article.tweet-header {
+  background-color: transparent;
   display: flex;
-  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 40px;
+  margin-top: 10px;
 }
 
 .profile-picture {
@@ -41,21 +44,21 @@ article.tweet-header {
 
 /* Styling for tweet content */
 .tweet-content {
-  margin: 10px 0;
-  text-align: center;
-  display: flex;
-  flex-direction: row;
-  align-self: center;
-  border-bottom: 1px solid #000000;
-  padding-bottom: 5px;
+  min-height: 40px;
+  margin-top: 10%;
+  font-size: 100%;
+  font-style: italic;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  border-bottom: 3px solid slategrey;
 }
 
 /* Styling for tweet footer */
 .tweet-footer {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  font-size: 16px;
   color: #777;
-  align-self: flex-end;
 }
 
 .tweet-footer i {

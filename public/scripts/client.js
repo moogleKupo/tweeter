@@ -1,7 +1,3 @@
-// Client-side JS logic goes here
-// jQuery is already loaded
-// Reminder: Use (and do all your DOM work in) jQuery's document ready function
-
 $(document).ready(function() {
   const loadTweets = function() {
     $.ajax({
@@ -34,7 +30,8 @@ $(document).ready(function() {
     const $tweet = $(`
       <article class="tweet">
         <header class="tweet-header">
-        <img class="profile-picture" src="${userAvatars}" alt="${tweet.user.name}" />          <h3>${tweet.user.name}</h3>
+          <img class="profile-picture" src="${userAvatars}" alt="${tweet.user.name}" />
+          <h3>${tweet.user.name}</h3>
           <span>${tweet.user.handle}</span>
         </header>
         <div class="tweet-content">
@@ -57,10 +54,17 @@ $(document).ready(function() {
     const $tweetText = $('#tweet-text');
     const tweetContent = $tweetText.val().trim();
 
+    const $errorContainer = $('#tweet-error-message');
+    $errorContainer.empty().hide(); // Clear and hide error messages
+
     if (tweetContent === "") {
-      alert("Tweet content cannot be empty.");
+      const $errMsg = $('<div>').text("Tweet content cannot be empty!");
+      $errMsg.prepend('<i class="fa-solid fa-circle-exclamation"></i>');
+      $errorContainer.append($errMsg).show().delay(2000).fadeOut();
     } else if (tweetContent.length > 140) {
-      alert("Tweet is too long. Maximum length is 140 characters.");
+      const $errMsg = $('<div>').text("Tweet is too long. Maximum length is 140 characters.");
+      $errMsg.prepend('<i class="fa-solid fa-circle-exclamation"></i>');
+      $errorContainer.append($errMsg).show().delay(2000).fadeOut();
     } else {
       const formData = $(this).serialize();
       $.ajax({
