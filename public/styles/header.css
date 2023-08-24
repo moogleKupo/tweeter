@@ -1,11 +1,11 @@
 header {
-  height: 400px;
+  height: 75px;
   width: 100%;
   display: flex;
-  justify-content: column;
-  align-items: center;
-  background-color: #4056A1;
-  margin-top: 120px;
+  justify-content: flex-start;
+  align-items:first baseline;
+  background-color: #D3D3D3;
+  margin-top: 0;
 }
 
 header .img {
@@ -13,5 +13,35 @@ header .img {
   align-items: center;
 }
 header .name {
-  transform: translateY(-100%);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #D3D3D3;
 }
+
+.tweet-header {
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 40px;
+  margin-top: 10px;
+}
+
+.profile-picture {
+width: 40px;
+height: 40px;
+border-radius: 50%;
+margin-right: 5px;
+display: flex;
+}
+
+.tweet-name {
+  font-size: 1.2rem;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+}
+

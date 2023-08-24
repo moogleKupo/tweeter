@@ -1,30 +1,43 @@
 /* Styling for tweet container */
 .tweet-container {
   margin-top: 20px;
-  background-color: #8a005e;
+  background-color: #4056A1;
   border: 2px solid #000000;
+  position: relative;
 }
 
 /* Styling for tweet article */
 .tweet {
   margin: 0 auto;
-  border: 3px solid black;
   margin-top: 15px;
   padding: 5px;
   max-width: 100%;
+  position: relative;
+  border: solid 2px black;
 }
+
 .tweet:hover {
   box-shadow: 12px 12px #4e4d4d;
 }
 
+.tweet-content {
+  min-height: 40px;
+  margin-top: 10%;
+  font-size: 100%;
+  font-style: italic;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  border-bottom: 3px solid slategrey;
+}
+
 /* Styling for tweet header */
 article.tweet-header {
-  background-color: transparent;
+  background-color: #4056A1;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 20px;
-  margin-top: 10px;
+  height: 10px;
+  margin-top: 0;
 }
 
 .profile-picture {
@@ -38,14 +51,15 @@ article.tweet-header {
 
 .tweet-name {
   font-size: 1.2rem;
-  display: flex;
-    align-self: flex-start;
+  position: absolute;
+  top: 5px;
+  right: 5px;
 }
 
 /* Styling for tweet content */
 .tweet-content {
   min-height: 40px;
-  margin-top: 10%;
+  margin-top: 0;
   font-size: 100%;
   font-style: italic;
   max-width: 100%;
@@ -76,4 +90,12 @@ article.tweet-header {
 
 .fas.fa-heart:hover {
   color: yellow;
+}
+
+.tweet-time {
+ position: absolute;
+ bottom: 5px;
+ left: 5px;
+ font-size: 0.8rem;
+ color: #777;
 }
