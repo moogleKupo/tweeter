@@ -47,6 +47,10 @@ main {
   flex-direction: column;
 }
 
+.tweet-container {
+  margin-right: 25px;
+}
+
 @media only screen and (max-width: 769px) {
   
   .body {
@@ -80,5 +84,5 @@ margin-top: 20px;
 #tweet-text {
   margin-top: 350px;
 }
-  
+
 }
