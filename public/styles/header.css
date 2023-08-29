@@ -45,3 +45,9 @@ display: flex;
   align-self: flex-start;
 }
 
+.name {
+  background-color: lightgrey /* Add background color to the header */
+  padding: 10px; /* Add padding for spacing */
+  text-align: center; /* Center header content */
+}
+

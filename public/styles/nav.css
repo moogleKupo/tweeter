@@ -3,10 +3,11 @@ nav {
   width: 100%;
   background-color: #4056A1;
   color: #FFFFFF;
-  font-family: Bungee, sans-serif;
+  font-family: 'Bungee', sans-serif;
   padding: 0 1.5em;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   position: fixed;
   margin: 0 auto; 
   top: 0;
@@ -15,8 +16,11 @@ nav {
 }
 
 nav .tweeter-logo {
-  font-family: Bungee, sans-serif;
+  font-family: 'Bungee', sans-serif;
   font-size: 36px;
+  display: flex; /* Use flex container to control layout */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center horizontally within the container */
 }
 
 .fa-solid.fa-angles-down {
@@ -25,13 +29,12 @@ nav .tweeter-logo {
 }
 
 nav .new-tweet {
-  font-family: Bungee, sans-serif;
-  float: right;
+  font-family: 'Source Sans Pro', sans-serif;
+  display: flex; /* Use flex container to control layout */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center horizontally within the container */
 }
 
-@media only screen and (max-width: 768px) {
-  nav {
-    background-color: #000000;
-    background-image: url("/images/profile-hex.png");
-  }
+.nav-icon {
+  margin-top: 5px; /* Add spacing between text and icon */
 }

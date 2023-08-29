@@ -1,8 +1,7 @@
 /* Styling for tweet container */
 .tweet-container {
   margin-top: 20px;
-  background-color: #4056A1;
-  border: 2px solid #000000;
+  background-color: lightgrey;
   position: relative;
 }
 
@@ -10,6 +9,7 @@
 .tweet {
   margin: 0 auto;
   margin-top: 15px;
+  margin-bottom: 20px;
   padding: 5px;
   max-width: 100%;
   position: relative;
