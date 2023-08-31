@@ -1,23 +1,11 @@
 header {
-  height: 75px;
-  width: 100%;
   display: flex;
-  justify-content: flex-start;
-  align-items:first baseline;
+  justify-content: space-between;
+  align-items: center;
   background-color: #D3D3D3;
   margin-top: 0;
 }
 
-header .img {
-  justify-content: center;
-  align-items: center;
-}
-header .name {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  background-color: #D3D3D3;
-}
 
 .tweet-header {
   background-color: transparent;
@@ -46,8 +34,7 @@ display: flex;
 }
 
 .name {
-  background-color: lightgrey /* Add background color to the header */
-  padding: 10px; /* Add padding for spacing */
+  background-color: lightgrey; /* Add background color to the header */
   text-align: center; /* Center header content */
 }
 

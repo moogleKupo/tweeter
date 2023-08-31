@@ -16,8 +16,7 @@
  * Global layout stuff
  */
 
-body {
-  color: #545149;
+.body {
   display: flex;
   background-color: lightgrey;
   font-size: 24px;
@@ -27,48 +26,72 @@ body {
   margin: 0; /* Reset default margin */
 }
 
-.profile-container {
-  margin-top: 120px;
-}
-
 nav .tweeter-logo {
   font-family: "Bungee";
 }
 
-main {
-  width: 100%;
+.counter {
+  font-family: "Bungee";
+}
+
+.main {
+  width: 90%;
   background-color: transparent;
+  margin: 0 auto;
+  display: flex;
 }
 
 .profile-container {
   display: flex;
-  background-color: goldenrod;
-  padding-top: 40px;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+    background-color: #cc8800;
+    background-image: url(/images/light-paper-fibers.png);
+    font-family: 'Source Sans 3', sans-serif;
+    margin-top: 120px;
+    padding: 25px;
+}
+
+
+
+.tweet-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.new-tweet {
+  display: flex;
   flex-direction: column;
 }
 
-.tweet-container {
-  margin-right: 15px;
+.counter {
+  margin-right: 10px; /* Adjust as needed */
 }
 
-@media only screen and (max-width: 769px) {
+@media only screen and (min-width: 1024px) {
   
-  .body {
+}
+
+@media only screen and (max-width: 1024px) {
+  
+  #mobile-body {
     justify-content: space-between;
     display: flex;
     flex-direction: column;
     width: 100%;
   }
 
-  .profile-container {
+  #mobile-profile-container {
     display:flex;
     background-color: goldenrod;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    margin-top: 120px;
   }
-  .nav {
+  .mobile-nav {
     background-color: goldenrod;
   }
 
@@ -78,11 +101,7 @@ main {
   }
 
  .new-tweet {
-margin-top: 20px;
+
  }
-  
-#tweet-text {
-  margin-top: 350px;
-}
 
 }

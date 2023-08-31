@@ -1,8 +1,10 @@
 /* Styling for tweet container */
 .tweet-container {
-  margin-top: 20px;
   background-color: lightgrey;
   position: relative;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px;
 }
 
 /* Styling for tweet article */
