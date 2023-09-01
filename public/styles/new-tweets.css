@@ -1,6 +1,6 @@
 #tweet-form {
   padding: 25px;
-  padding-top: 40px;
+  padding-top: 120px;;
   
 }
 
@@ -31,11 +31,6 @@ button[type="submit"] {
 
 #tweet-button:hover {
   background-color: #37e207;
-}
-#tweet-counter {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
 }
 
 .exceeded-limit {

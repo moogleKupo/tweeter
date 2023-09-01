@@ -53,8 +53,8 @@
   </span>
     </nav>
 
-    <div class="underNav">
-    <header>
+    <span class="underNav" id="mobile-underNav">
+    <header class="header" id="mobile-header">
       <div class="profile-container" id="mobile-profile-container">
         <img class="img" src="/images/profile-hex.png" />
         <h2>Taylor Maine</h2>
@@ -66,9 +66,13 @@
         <form id="tweet-form" action="/tweets/" method="POST">
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <div class="error-message" id="tweet-error-message"></div>
-          
+          <div class="tweet-button-counter">
           <button type="submit" id="tweet-button">Tweet</button>
+          
+        
           <output name="counter" class="counter" for="tweet-text" id="tweet-counter">140</output>
+        </div>
+        </div>
         </form>
       </section>
       <section class="tweet-container" id="tweets-container">
@@ -94,7 +98,7 @@
         </article>
       </section>
     </main>
-    </div>
+  </span>
     </body>
     </html>
     

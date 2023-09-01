@@ -1,4 +1,12 @@
-header {
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #D3D3D3;
+  margin-top: 0;
+}
+
+#mobile-header {
   display: flex;
   justify-content: space-between;
   align-items: center;

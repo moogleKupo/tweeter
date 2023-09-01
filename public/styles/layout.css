@@ -26,6 +26,10 @@
   margin: 0; /* Reset default margin */
 }
 
+.underNav {
+  display: flex;
+}
+
 nav .tweeter-logo {
   font-family: "Bungee";
 }
@@ -39,6 +43,7 @@ nav .tweeter-logo {
   background-color: transparent;
   margin: 0 auto;
   display: flex;
+  align-items: center;
 }
 
 .profile-container {
@@ -53,8 +58,6 @@ nav .tweeter-logo {
     padding: 25px;
 }
 
-
-
 .tweet-actions {
   display: flex;
   justify-content: space-between;
@@ -65,13 +68,28 @@ nav .tweeter-logo {
   flex-direction: column;
 }
 
-.counter {
-  margin-right: 10px; /* Adjust as needed */
+@media only screen and (min-width: 1024px) {
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #D3D3D3;
+  margin-top: 0;
+  margin-left: 25px;
 }
 
-@media only screen and (min-width: 1024px) {
-  
+main {
+display: flex;
+flex-direction: column;
 }
+
+.tweet-button-counter{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+}
+
 
 @media only screen and (max-width: 1024px) {
   
@@ -100,8 +118,9 @@ nav .tweeter-logo {
     flex-direction: column;
   }
 
- .new-tweet {
-
+ #mobile-underNav {
+width: 100%;
+display: flex;
+flex-direction: column;
  }
-
 }
