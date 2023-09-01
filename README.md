@@ -17,5 +17,5 @@ This repository is the starter code for the project: Students will fork and clon
 - Express
 - Node 5.10.x or above
 
-![Desktop View](/Users/taylormaine/Desktop/Screenshot 2023-09-01 at 4.41.36 PM.png)
-![Mobile View](/Users/taylormaine/Desktop/Screenshot 2023-09-01 at 4.41.15 PM.png)
+![Desktop View](/Users/taylormaine/lighthouse/tweeter/Screenshot 2023-09-01 at 4.41.36 PM.png)
+![Mobile View](//Users/taylormaine/lighthouse/tweeter/Screenshot 2023-09-01 at 4.41.15 PM.png)
