@@ -81,6 +81,7 @@ nav .tweeter-logo {
 main {
 display: flex;
 flex-direction: column;
+width: 100vw;
 }
 
 .tweet-button-counter{
